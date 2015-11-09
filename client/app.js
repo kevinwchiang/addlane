@@ -17,5 +17,9 @@ angular.module('app',
         url: "/signupPage",
         templateUrl: "signupPage/signupPage.html"
       })
+      .state('successPage', {
+        url: "/successPage",
+        templateUrl: "successPage/successPage.html"
+      })
 
 }])

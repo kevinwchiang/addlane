@@ -63,12 +63,13 @@ table {
   margin-left: auto;
   margin-right: auto;
   padding: 100px 60px 0px 60px;
+  overflow: auto;
 }
 
 .landing-header {
   font-size: 24px;
   height: 80px;
-  width: 80%;
+  width: 70%;
   display: inline-block;
   font-weight: 100;
 }
@@ -85,13 +86,94 @@ table {
   color: #707478;
 }
 
-.landing-login-content .landing-login-form .input-lg{
+.landing-login-form {
   font-size: 12px;
+}
+
+.form-control.input-lg {
+  font-size: 12px;
+}
+
+.incorrect-input.form-control.input-lg:focus {
+  border-color: red;
+}
+
+.correct-input.form-control.input-lg {
+  border-color: green;
+}
+
+.landing-login-content .landing-login-form .input-lg{
   margin-bottom: 15px;
 }
-/*
-@media only screen and (max-width: 600px) {
+
+.landing-login-content .landing-login-form .landing-login-checkbox {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.btn.btn-success {
+  background-color: #00acac;
+  margin-bottom: 20px;
+}
+
+.btn.btn-success:hover {
+  background-color: #008B8B;
+}
+
+.landing-signup {
+  font-size: 12px;
+  color: #707478;
+}
+
+.signup-link {
+  color: #00acac;
+}
+
+.landing-email-invalid, .signup-username-invalid{
+  position: absolute;
+  right: 77px;
+  top: 195px;
+  color: red;
+}
+
+.landing-email-valid, .signup-username-valid{
+  position: absolute;
+  right: 77px;
+  top: 195px;
+  color: green;
+}
+
+.landing-password-invalid, .signup-email-invalid{
+  position: absolute;
+  right: 77px;
+  top: 255px;
+  color: red;
+}
+
+.landing-password-valid, .signup-email-valid{
+  position: absolute;
+  right: 77px;
+  top: 255px;
+  color: green;
+}
+
+.signup-password-invalid {
+  position: absolute;
+  right: 77px;
+  top: 317px;
+  color: red;
+}
+
+.signup-password-valid {
+  position: absolute;
+  right: 77px;
+  top: 317px;
+  color: green;
+}
+
+@media only screen and (max-width: 680px) {
   .landing-block {
-    width: 100%;
+    width: 100vw;
   }
-}*/
+}
+

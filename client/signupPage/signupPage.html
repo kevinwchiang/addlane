@@ -1,3 +1,27 @@
 <div ng-controller="signupPageController"> 
-{{ test }} 
+  <div class="landing-block">
+    <div class="landing-header">
+      Addlane
+      <small>Description or slogan </small>
+    </div>
+    <i class="fa fa-sign-in"></i>
+
+    <div class="landing-login-content">
+      <form class="landing-login-form">
+        <input ng-change="usernameCheck(form.username)" ng-model="form.username" ng-class="form.usernameValidation" placeholder="Username"/>
+        <input ng-change="emailCheck(form.email)" ng-model="form.email" ng-class="form.emailValidation" placeholder="Email Address"/>
+        <input type="password" ng-change="checkValidPassword()" ng-model="form.password" ng-class="form.passwordValidation" placeholder="Password"/>
+        <button ng-click="signUp()" class="btn btn-lg btn-block btn-success">Sign Up</button>
+        <label ng-show="!form.usernameValid && form.username" class="signup-username-invalid">Invalid Username</label>
+        <label ng-show="form.usernameValid" class="signup-username-valid">Good!</label>
+        <label ng-show="!form.emailValid && form.email" class="signup-email-invalid">Invalid Email</label>
+        <label ng-show="form.emailValid" class="signup-email-valid">Good!</label>
+        <label ng-show="!form.passwordValid && form.password" class="signup-password-invalid">Invalid Password</label>
+        <label ng-show="form.passwordValid" class="signup-password-valid">Good!</label>
+      </form>
+      <div class="landing-signup">
+        Already a member? Click <a class="signup-link" ui-sref="landingPage">here</a> to sign in.
+      </div>
+    </div>
+  </div>
 </div>
