@@ -12,12 +12,10 @@
         <input type="password" ng-change="checkValidPassword()" ng-model="form.password" ng-class="form.passwordValidation" placeholder="Password"/>
         <input class="landing-login-checkbox" type="checkbox">Remember Me<br>
         <button ng-click="signIn()" class="btn btn-lg btn-block btn-success">Sign In</button>
-        <validation>
-          <label ng-show="!form.emailValid && form.email" class="landing-email-invalid">Invalid Email</label>
-          <label ng-show="form.emailValid" class="landing-email-valid">Good!</label>
-          <label ng-show="!form.passwordValid && form.password" class="landing-password-invalid">Invalid password</label>
-          <label ng-show="form.passwordValid" class="landing-password-valid">Good!</label>
-        </validation>
+        <label ng-show="!form.emailValid && form.email" class="landing-email-invalid">Invalid Email</label>
+        <label ng-show="form.emailValid" class="landing-email-valid">Good!</label>
+        <label ng-show="!form.passwordValid && form.password" class="landing-password-invalid">Invalid password</label>
+        <label ng-show="form.passwordValid" class="landing-password-valid">Good!</label>
       </form>
       <div class="landing-signup">
         Not a member yet? Click <a class="signup-link" ui-sref="signupPage">here</a> to register.
